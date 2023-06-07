@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
     response.on("data",function(data){
         const weatherData = JSON.parse(data)
        
-       res.send("climate in mumbai is" + data +"this")
+       res.send("climate in "+ query +" is" + data)
     })
      })
 })
