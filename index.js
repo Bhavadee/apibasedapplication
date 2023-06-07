@@ -22,6 +22,8 @@ app.get('/', (req, res) => {
     })
      })
 })
-app.listen(9985 ,() => {
+
+const PORT = process.env.PORT || 9985;
+app.listen(PORT,() => {
     console.log('port connected');
 })
