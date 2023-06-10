@@ -17,8 +17,12 @@ app.get('/', (req, res) => {
     
     response.on("data",function(data){
         const weatherData = JSON.parse(data)
-       
-       res.send("climate in "+ query +" is" + data)
+
+        const url = "https://openweathermap.org/img/wn/"+weatherData.weather[0].icon+"@2x.png"
+       res.write("<p>the weather is currently"+weatherData.weather[0].description+"</p>");
+       res.write("<h2>climate in "+ query +" is" + weatherData.main.temp+ "</h2>");
+       res.write("<img src = " + url +" >");
+       res.send()
     })
      })
 })
