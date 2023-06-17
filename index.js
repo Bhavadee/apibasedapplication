@@ -12,7 +12,10 @@ app.get('/', (req, res) => {
     app.post("/",function(req, res){
        
         const query = req.body.cityName;
-        const url = "https://api.openweathermap.org/data/2.5/weather?q="+query+"&appid=7f49e937afaa46f39f19f3f4136c9bc8&units=metric";
+         console.log(req.body.units);
+        const uquery = req.body.units;
+       
+        const url = "https://api.openweathermap.org/data/2.5/weather?q="+query+"&appid=7f49e937afaa46f39f19f3f4136c9bc8&units="+uquery;
         https.get(url,function(response){
     
     response.on("data",function(data){

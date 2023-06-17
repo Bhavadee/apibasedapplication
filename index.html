@@ -5,18 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-     <link rel="stylesheet" href="css/login.css">
+      <style>
+         * {
+            text-align: center;
+         }
+      
+         .sub {
+      
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+         }
+      
+         .sub :hover {
+            background-color: #45a049;
+         }
+         input[type=text],
+select {
+
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+      
+         div {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            margin: 60px;
+            padding: 40px;
+         }
+      </style>
 </head>
 <body>
     
 
-   
+<div> 
    <form action = "/" method = "post">
       <h2>city name</h2>
    <input id = "cityInput" type = "text" name = "cityName">
+   <br><br>
+   <h2><label for="cars">Choose a units:</label></h2>
+   <select name="units" id="cars">
+      <option value="metric">metric</option>
+      <option value="imperial">imperial</option>
+      <option value="standard">standard</option>
+
+   </select><br>
+   <br>
    
     <input class = "sub" type = "submit">
    </form>
-  
+</div>
 </body>
 </html>
